@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ surfboard.title }}</title>
+    <link href="{{ url_for('static', filename='description_style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <button class="return-button" onclick="window.location.href='{{ url_for('homepage') }}'">
+        <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Logo" width="20" height="20">
+        Return to Homepage
+    </button>
+    <div class="header">
+        <h1>{{ surfboard.title }}</h1>
+    </div>
+    <div class="container">
+        <div class="img-container">
+            <img src="{{ url_for('static', filename=surfboard.image_filename) }}" alt="{{ surfboard.title }}">
+        </div>
+
+            <div class="text-content">
+            <h2>Details</h2>
+            <label>Length</label>
+            <p>{{ surfboard.length }}</p>
+            <label>Width</label>
+            <p>{{ surfboard.width }}</p>
+            <label>Thickness</label>
+            <p>{{ surfboard.thickness }}</p>
+            <label>Volume</label>
+            <p>{{ surfboard.volume }}</p>
+        </div>
+    </div>
+
+    <div class="reviews-section">
+        <h2>Reviews</h2>
+        <div id="reviews-list">
+            {% for review in surfboard.reviews %}
+                <div class="review">
+                    <p><strong>{{ review.author }}</strong>: {{ review.content }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <form action="{{ url_for('surfboard', surfboard_id=surfboard.id) }}" method="post">
+            <h3>Add a Review</h3>
+            <label for="author">Your Name:</label>
+            <input type="text" id="author" name="author" required>
+
+            <label for="content">Your Review:</label>
+            <textarea id="content" name="content" rows="4" required></textarea>
+
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+</body>
+</html>

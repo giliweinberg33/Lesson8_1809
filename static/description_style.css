@@ -1,0 +1,161 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Light gray background */
+    margin: 0;
+    padding: 20px;
+}
+
+.header {
+    text-align: center; /* Center align header */
+    margin-bottom: 30px; /* Space below header */
+}
+
+.header h1 {
+    color: #333; /* Darker text color for header */
+    font-size: 32px; /* Larger font size for header */
+}
+
+.return-button {
+    padding: 10px 20px; /* Padding for button */
+    background-color: #007bff; /* Primary color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    margin-bottom: 20px; /* Space below button */
+    display: flex; /* Flexbox for aligning logo */
+    align-items: center; /* Center align items */
+}
+
+.return-button img {
+    width: 70px; /* Increase logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 8px; /* Space between logo and text */
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Change to row to place items side by side */
+    justify-content: space-between; /* Space between the two sections */
+    align-items: flex-start; /* Align items at the top */
+    background-color: #ffffff; /* White background for main container */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for container */
+    padding: 20px; /* Padding for container */
+    max-width: 900px; /* Increased max width */
+    margin: auto; /* Center container */
+}
+
+.img-container {
+    flex: 1; /* Allow the image container to grow */
+    margin-left: 20px; /* Space between text and image */
+    margin-right: 250px
+}
+
+.img-container img {
+    max-width: 200%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Keep rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for images */
+}
+
+.text-content {
+    flex: 2; /* Allow the text content to take more space */
+    color: #555; /* Text color */
+    text-align: left; /* Left align text */
+    margin-bottom: 20px; /* Space below text content */
+}
+
+.text-content h2 {
+    font-size: 24px; /* Title font size */
+    color: #007bff; /* Primary color for title */
+    margin: 10px 0; /* Margin for title */
+}
+
+.text-content p {
+    line-height: 1.6; /* Better line spacing */
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+/* Styles for the reviews section */
+.reviews-section {
+    width: 100%; /* Full width */
+    margin-top: 30px; /* Space above reviews section */
+    background-color: #ffffff; /* White background for reviews section */
+    padding: 20px; /* Padding for reviews */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.reviews-section h2 {
+    color: #333; /* Dark color for the reviews title */
+    margin-bottom: 20px; /* Margin below title */
+    font-size: 22px; /* Size for reviews title */
+}
+
+.review {
+    background-color: #f9f9f9; /* Light background for each review */
+    padding: 15px; /* Padding for reviews */
+    margin-bottom: 15px; /* Space between reviews */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.review strong {
+    color: #007bff; /* Primary color for author name */
+}
+
+/* Styles for the review form */
+form {
+    border: 2px solid #007bff; /* Visible border for the form */
+    padding: 20px; /* Padding for form */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background for the form */
+}
+
+form h3 {
+    margin-top: 0; /* Remove top margin */
+}
+
+form label {
+    display: block; /* Block display for labels */
+    margin-top: 10px; /* Space above labels */
+}
+
+form input,
+form textarea {
+    width: 98%; /* Full width for inputs */
+    padding: 10px; /* Padding for inputs */
+    margin-top: 5px; /* Space above inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners */
+}
+
+form button {
+    margin-top: 10px; /* Space above button */
+    padding: 10px 20px; /* Padding for button */
+    background-color: #007bff; /* Primary color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+form button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack vertically on small screens */
+        padding: 15px; /* Less padding on small screens */
+    }
+    .img-container {
+        margin-left: 0; /* Remove margin on small screens */
+        margin-top: 20px; /* Space above image */
+    }
+    .text-content {
+        padding: 10px; /* Less padding on small screens */
+    }
+}

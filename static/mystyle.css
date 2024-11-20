@@ -1,0 +1,53 @@
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Set three columns */
+    gap: 16px; /* Space between buttons */
+}
+
+.photo-button {
+    border: none;
+    padding: 10px; /* Add padding to increase button size */
+    background: #1e1e1e; /* Dark background for buttons */
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden; /* Ensure rounded corners for images */
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex; /* Use flexbox for better alignment */
+    flex-direction: column; /* Stack label and image vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    height: 300px; /* Set a fixed height to maintain layout */
+}
+
+.photo-button label {
+    color: #FFD700; /* Gold color for the label */
+    font-size: 1.1em; /* Slightly larger font size */
+    font-weight: bold; /* Make the font bold */
+    margin: 0 0 8px; /* Space between label and image */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add a subtle shadow for depth */
+}
+
+.photo-button img {
+    width: auto; /* Allow width to adjust while keeping aspect ratio */
+    height: 100%; /* Set height to fill the button */
+    max-width: 100%; /* Ensure image doesn't exceed button size */
+    object-fit: contain; /* Maintain original aspect ratio */
+    border-radius: 8px; /* Match the button corners */
+}
+
+.photo-button:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.photo-button:focus {
+    outline: none; /* Remove outline on focus */
+    box-shadow: 0 0 0 3px rgba(255,

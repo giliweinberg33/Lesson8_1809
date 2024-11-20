@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert Surfboard</title>
+    <link href="{{ url_for('static', filename='insert_style.css')}}" rel="stylesheet">
+</head>
+<body>
+    <h3>Insert Surfboard:</h3>
+    <form method="post" enctype="multipart/form-data">
+        <label>Title</label>
+        <input name="title" type="text">
+        <br><br>
+        <label>Length</label>
+        <input name="length" type="text">
+        <br><br>
+        <label>Width</label>
+        <input name="width" type="text">
+        <br><br>
+        <label>Thickness</label>
+        <input name="thickness" type="text">
+        <br><br>
+        <label>Volume</label>
+        <input name="volume" type="text">
+        <br><br>
+        <input type="file" name="image_filename">
+        <br>
+        <input type="submit" value="Add">
+    </form>
+    <br>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link href="{{ url_for('static', filename='mystyle.css')}}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        {% for surfboard in surfboards %}
+            <button class="photo-button" onclick="window.location.href='{{ url_for('surfboard', surfboard_id=surfboard.id) }}'">
+                <label>{{ surfboard.title }}</label>
+                <br>
+                <img src="{{ url_for('static', filename=surfboard.image_filename)}}">
+            </button>
+        {% endfor %}
+    </div>
+</body>
+</html>
